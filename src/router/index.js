@@ -47,8 +47,8 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log('Global Guard');
-  console.log(to.matched);
+  // console.log('Global Guard');
+  // console.log(to.matched);
   if (!to.matched.some((record) => record.meta.requiresAuth)) {
     next();
     return;

@@ -165,7 +165,9 @@
         type="checkbox"
         class="w-4 h-4 float-left -ml-6 mt-1 rounded"
       />
-      <label class="inline-block">Accept terms of service</label>
+      <i18n-t class="inline-block" keypath="register.accept" tag="label"
+        ><a href="#">{{ $t('register.TOS') }}</a></i18n-t
+      >
     </div>
     <div class="mb-3 pl-6">
       <ErrorMessage class="text-red-600" name="tos" />
@@ -191,11 +193,14 @@
 </template>
 
 <script>
-
 export default {
   name: 'RegistrationForm',
   data() {
     return {
+      reg_show_alert: false,
+      reg_in_submission: false,
+      reg_alert_variant: 'bg-blue-500',
+      reg_alert_msg: 'Please wait! Your account is being created.',
       schema: {
         name: 'required|min:3|max:100|alpha_spaces',
         email: 'required|min:3|max:100|email',

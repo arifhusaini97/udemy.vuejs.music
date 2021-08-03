@@ -1,7 +1,7 @@
 <template>
   <div
     class="fixed z-10 inset-0 overflow-y-auto"
-    :class="{ hidden: !authModelShow }"
+    :class="{ hidden: !authModalShow }"
     id="modal"
   >
     <div
@@ -51,7 +51,7 @@
             <!-- Modal Close Button -->
             <div
               class="modal-close cursor-pointer z-50"
-              @click.prevent="toggleAuthModel"
+              @click.prevent="toggleAuthModal"
             >
               <i class="fas fa-times"></i>
             </div>
@@ -112,12 +112,12 @@ export default {
   computed: {
     // * Alternative
     // ...mapState({
-    //   modal: 'authModelShow',
+    //   modal: 'authModalShow',
     // }),
-    ...mapState(['authModelShow']),
+    ...mapState(['authModalShow']),
   },
   methods: {
-    ...mapMutations(['toggleAuthModel']),
+    ...mapMutations(['toggleAuthModal']),
   },
 };
 </script>

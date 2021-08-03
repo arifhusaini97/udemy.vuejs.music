@@ -19,7 +19,7 @@
             >
           </li>
           <li v-if="!userLoggedIn">
-            <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModel"
+            <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal"
               >Login / Register</a
             >
           </li>
@@ -36,6 +36,14 @@
             </li></template
           >
         </ul>
+
+        <ul class="flex flex-row mt-1 ml-auto">
+          <li>
+            <a href="#" class="px-2 text-white" @click.prevent="changeLocale">{{
+              currentLocale
+            }}</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -47,7 +55,7 @@ import { mapMutations, mapState } from 'vuex';
 export default {
   name: 'Header',
   methods: {
-    ...mapMutations(['toggleAuthModel']),
+    ...mapMutations(['toggleAuthModal']),
     // ...mapActions(['signOut']),
     signOut() {
       this.$store.dispatch(
@@ -62,9 +70,15 @@ export default {
       }
       console.log(this.$route);
     },
+    changeLocale() {
+      this.$i18n.locale = this.$i18n.locale === 'my' ? 'en' : 'my';
+    },
   },
   computed: {
     ...mapState(['userLoggedIn']),
+    currentLocale() {
+      return this.$i18n.locale === 'my' ? 'Malay' : 'English';
+    },
   },
 };
 </script>

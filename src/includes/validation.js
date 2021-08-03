@@ -53,7 +53,7 @@ export default {
       validate: true,
       validateOnChange: true,
       validateOnInput: false,
-      validateOnModelUpdate: true,
+      validateOnModalUpdate: true,
     });
   },
 };

@@ -5,7 +5,7 @@ import helper from '@/includes/helper';
 
 export default createStore({
   state: {
-    authModelShow: false,
+    authModalShow: false,
     userLoggedIn: false,
     currentSong: {},
     sound: {},
@@ -14,8 +14,8 @@ export default createStore({
     playerProgress: '0%',
   },
   mutations: {
-    toggleAuthModel: (state) => {
-      state.authModelShow = !state.authModelShow;
+    toggleAuthModal: (state) => {
+      state.authModalShow = !state.authModalShow;
     },
     toggleAuthStatus: (state) => {
       state.userLoggedIn = !state.userLoggedIn;
@@ -34,7 +34,7 @@ export default createStore({
     },
   },
   getters: {
-    // authModelShow: (state) => state.authModelShow,
+    // authModalShow: (state) => state.authModalShow,
 
     playing: (state) => {
       if (state.sound.playing) {
