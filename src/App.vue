@@ -2,7 +2,7 @@
   <!-- Header -->
   <app-header />
 
-  <router-view v-slot="{ Component }"  :key="$route.fullPath">
+  <router-view v-slot="{ Component }" :key="$route.fullPath">
     <transition name="fade" mode="out-in">
       <component :is="Component" > </component
     ></transition>

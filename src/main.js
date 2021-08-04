@@ -10,6 +10,7 @@ import './assets/main.css';
 import { auth } from './includes/firebase';
 import i18n from './includes/i18n';
 import './registerServiceWorker';
+import GlobalComponents from './includes/_globals';
 
 let app;
 
@@ -20,6 +21,7 @@ auth.onAuthStateChanged(() => {
     app.use(store);
     app.use(router);
     app.use(VeeValidatePlugin);
+    app.use(GlobalComponents);
     app.directive('icon', Icon);
     app.mount('#app');
   }

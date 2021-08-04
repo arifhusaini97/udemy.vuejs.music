@@ -2,6 +2,7 @@
   <main>
     <!-- <div class="home"> -->
     <!-- Introduction -->
+    <base-button></base-button>
     <section class="mb-8 py-20 text-white text-center relative">
       <div
         class="absolute inset-0 w-full h-full bg-contain introduction-bg"
@@ -75,10 +76,10 @@ export default {
   components: { AppSongItem },
   async created() {
     this.getSongs();
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll());
   },
   beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll());
     console.log('beforeUnomount');
   },
   methods: {
