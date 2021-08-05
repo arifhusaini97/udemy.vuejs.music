@@ -115,9 +115,15 @@ export default {
     //   modal: 'authModalShow',
     // }),
     ...mapState(['authModalShow']),
+    // * For Module Store
+    // ...mapState({
+    //   authModalShow: (state) => state.auth.authModalShow,
+    // }),
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
+    // * If the store use namespaced
+    // ...mapMutations('auth', ['toggleAuthModal']),
   },
 };
 </script>

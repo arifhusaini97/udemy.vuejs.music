@@ -4,6 +4,8 @@ import { Howl } from 'howler';
 import helper from '@/includes/helper';
 
 export default createStore({
+  // Put this inside module
+  // namespaced: true,
   state: {
     authModalShow: false,
     userLoggedIn: false,
