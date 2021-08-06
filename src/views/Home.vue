@@ -80,7 +80,7 @@ export default {
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll());
-    console.log('beforeUnomount');
+    // console.log('beforeUnomount');
   },
   methods: {
     handleScroll() {
@@ -88,7 +88,7 @@ export default {
       const { innerHeight } = window;
       const bottomOfWindow = Math.round(scrollTop) + innerHeight === offsetHeight;
       if (bottomOfWindow) {
-        console.log('Bottom of Window');
+        // console.log('Bottom of Window');
         this.getSongs();
       }
     },

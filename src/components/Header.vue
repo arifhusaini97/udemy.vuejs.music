@@ -68,7 +68,7 @@ export default {
       if (this.$route.meta.requiresAuth) {
         this.$router.push({ name: 'home' });
       }
-      console.log(this.$route);
+      // console.log(this.$route);
     },
     changeLocale() {
       this.$i18n.locale = this.$i18n.locale === 'my' ? 'en' : 'my';
