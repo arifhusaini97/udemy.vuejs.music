@@ -64,7 +64,7 @@ export default createStore({
         displayName: payload.name,
       });
 
-      commit('toggleAuth');
+      commit('toggleAuthStatus');
     },
     async login({ commit }, payload) {
       await auth.signInWithEmailAndPassword(payload.email, payload.password);
