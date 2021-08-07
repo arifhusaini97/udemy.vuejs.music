@@ -47,3 +47,8 @@
 //     expect(result).toEqual(true);
 //   });
 // });
+
+// Dummy Test
+test('Dummy Test', () => {
+  expect(true).toBe(true);
+});
