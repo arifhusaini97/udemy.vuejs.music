@@ -11,6 +11,7 @@
             duration-300
             hover:bg-gray-50
             example
+            snapshot
           "
           :class="`song-id-${song.docID}`"
   >
