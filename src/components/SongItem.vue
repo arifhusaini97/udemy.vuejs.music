@@ -10,7 +10,9 @@
             transition
             duration-300
             hover:bg-gray-50
+            example
           "
+          :class="`song-id-${song.docID}`"
   >
     <div>
       <router-link
